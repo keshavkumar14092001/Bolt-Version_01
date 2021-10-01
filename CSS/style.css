@@ -1,0 +1,501 @@
+/* CSS Reset */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+:root {
+    --primary-color: #047aed;
+    --secondary-color: #1c3fa8;
+    --dark-color: #002240;
+    --light-color: #f4f4f4;
+    --sucess-color: #5cb85c;
+    --error-color: #d9534f;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: #333;
+    line-height: 1.5;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+p {
+    margin: 10px 0px;
+}
+
+img {
+    width: 100%;
+}
+
+.hidden {
+    visibility: hidden;
+    height: 0px;
+}
+
+/* NAVBAR Section */
+
+.navbar {
+    background-color: var(--primary-color);
+    color: #fff;
+    height: 70px;
+    animation: slideFromTop 1s ease-in;
+}
+
+.navbar .flex {
+    justify-content: space-between;
+}
+
+.container h1 {
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+.navbar .container ul {
+    display: flex;
+}
+
+.navbar .container ul a {
+    color: #fff;
+    font-size: 1.1rem;
+    margin: 0px 20px;
+    padding: 2px 3px;
+}
+
+.navbar .container ul a:hover {
+    border-bottom: 2px solid #fff;
+    color: #000;
+}
+
+/* SHOWCASE Section */
+
+.showcase {
+    height: 400px;
+    background-color: var(--primary-color);
+    color: #fff;
+    position: relative;
+}
+
+.showcase h1 {
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 10px 0px;
+}
+
+.showcase p {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 20px 0px;
+}
+
+.showcase .grid {
+    grid-template-columns: 60% 40%;
+    gap: 30px;
+}
+
+.showcase-text {
+    animation: slideFromLeft 1s ease-in;
+}
+
+.showcase-form {
+    animation: slideFromRight 1s ease-in;
+}
+
+.showcase-form {
+    position: relative;
+    top: 60px;
+    height: 350px;
+    width: 400px;
+    padding: 20px 55px;
+    z-index: 100;
+    justify-self: flex-end;
+}
+
+.showcase-form h2 {
+    color: #000;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.showcase-form .form-control {
+    margin: 30px 0px;
+}
+
+.form-control input[type="text"], .form-control input[type="email"] {
+    width: 100%;
+    border: 0;
+    outline: none;
+    border-bottom: 1px solid #b4becb;
+    padding: 3px 6px;
+    font-size: 18px;
+    color: #000;
+}
+
+.btn-primary {
+    width: 100%;
+    margin: 10px 0px;
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.btn-primary:hover {
+    transform: scale(0.95);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid #fff;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.btn-outline:hover {
+    transform: scale(0.90);
+}
+
+/* For Slanting Effect */
+
+.showcase::before, .showcase::after {
+    content: "";
+    position: absolute;
+    height: 100px;
+    bottom: -70px;
+    right: 0;
+    left: 0;
+    background: #fff;
+    transform: skewY(-3deg);
+    -webkit-transform: skewY(-3deg);
+    -moz-transform: skewY(-3deg);
+    -ms-transform: skewY(-3deg);
+}
+
+/* Records Section */
+
+.records {
+    padding-top: 100px;
+    animation: slideFromBottom 1s ease-in;
+}
+
+.font-awesome {
+    text-align: center;
+}
+
+.records-heading {
+    font-size: 22px;
+    letter-spacing: 1;
+}
+
+.grid .font-awesome p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Command Section */
+
+.command .grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.command .grid>*:first-child {
+    grid-column: 1 / span 2;
+    grid-row: 1 /span 2;
+}
+
+/* Cloud Section */
+
+.cloud-section {
+    color: #fff;
+}
+
+.cloud-section .grid {
+    grid-template-columns: 4fr 3fr;
+}
+
+.btn-dark {
+    background-color: var(--dark-color);
+}
+
+.btn-dark:hover {
+    transform: scale(0.90);
+}
+
+/* other-languags Section */
+
+.other-languags .container .card {
+    text-align: center;
+    margin: 10px 13px;
+    transition: transform 0.1s ease-in;
+}
+
+.other-languags .container .card:hover {
+    transform: translateY(-15px);
+    cursor: pointer;
+}
+
+.other-languags .container .card h4 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.other-languags .flex {
+    flex-wrap: wrap;
+}
+
+/* Features Head Section */
+
+.featureImage {
+    animation: slideFromRight 1s ease-in;
+}
+
+.features-head .container img {
+    width: 300px;
+    justify-self: flex-end;
+}
+
+.features-head .container div p {
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 10px 0px;
+}
+
+/* Features SubHead Section */
+
+.features-subhead {
+    animation: slideFromBottom 1s ease-in;
+}
+
+.features-subhead .container {
+    background: #ccc;
+}
+
+.features-subhead .container img {
+    width: 400px;
+    justify-self: flex-end;
+}
+
+.features-subhead .container div h1 {
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 20px 0px;
+}
+
+.features-subhead .container div p {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Features Main Area */
+
+.features-mainarea .card i {
+    margin-right: 20px;
+}
+
+.features-mainarea .card p {
+    text-align: center;
+    font-size: 18px;
+    padding: 0px 5px;
+    font-weight: bold;
+}
+
+.features-mainarea .card {
+    padding: 10px;
+    margin: 10px;
+    background: #f4f4f4;
+}
+
+.features-mainarea .grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.features-mainarea .grid>*:first-child {
+    grid-column: 1 / span 3;
+}
+
+.features-mainarea .grid>*:nth-child(2) {
+    grid-column: 1 / span 2;
+}
+
+/* Docs Head Section */
+
+.docsImage {
+    animation: slideFromRight 1s ease-in;
+}
+
+.docs-main {
+    animation: slideFromBottom 1s ease-in;
+}
+
+.docs-head .container img {
+    width: 250px;
+    justify-self: flex-end;
+}
+
+.docs-head .container div p {
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 10px 0px;
+}
+
+/* DOCS Main Section */
+
+.docs-main .grid {
+    grid-template-columns: 1fr 2fr;
+    align-items: flex-start;
+}
+
+.docs-main .container .bg-light {
+    background-color: #f4f4f4;
+}
+
+.docs-main .container .bg-light h3 {
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+
+.docs-main .container .bg-light li {
+    margin-bottom: 5px;
+}
+
+.docs-main .container .bg-light a {
+    color: var(--primary-color);
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.docs-main .container .bg-light a:hover {
+    text-decoration: underline #000;
+}
+
+.docs-main .container .main-card-2 h1 {
+    font-size: 35px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.docs-main .container .main-card-2 h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.docs-main .container .main-card-2 .introPara {
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    margin: 20px 0px;
+}
+
+.docs-main .container .main-card-2 .secondPara {
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.alert-success {
+    background: var(--sucess-color);
+    color: white;
+}
+
+.docs-main .container .main-card-2 .codePara {
+    font-weight: bold;
+    font-size: 17px;
+}
+
+code, pre {
+    background: #333;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.btn-docs:hover {
+    transform: scale(0.90);
+}
+
+/* Footer Section */
+
+.footer .container nav a {
+    color: #fff;
+    font-size: 20px;
+}
+
+.footer .container nav a:hover {
+    border-bottom: 1px solid #fff;
+}
+
+.footer .container .socialMedia-icons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer .container .socialMedia-icons a {
+    color: #fff;
+}
+
+.footer .container .socialMedia-icons a:hover {
+    transform: scale(1.50);
+}
+
+/* Animations */
+
+@keyframes slideFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideFromRight {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideFromTop {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideFromBottom {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
